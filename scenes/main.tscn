@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Texture2D" uid="uid://doru7midrpdu7" path="res://tx/planks/planks-color.png" id="1_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://c4hdqoif48omv" path="res://tx/planks/planks-metalness.png" id="2_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://cx7n8d28shd75" path="res://tx/planks/planks-normal.png" id="3_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://68f3tstw876x" path="res://tx/planks/planks-roughness.png" id="4_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://b3xo5g5tx3e3h" path="res://tx/wood/wood-color.png" id="5_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://b8n3tlxvkyl4g" path="res://tx/wood/wood-metalness.png" id="6_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://c22rxeaaxyiix" path="res://tx/wood/wood-normal.png" id="7_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://fokoj71piylf" path="res://tx/wood/wood-roughness.png" id="8_eb6dy"]
+[ext_resource type="Script" uid="uid://d0bw5tb0mncin" path="res://scr/camera.gd" id="9_gqmmt"]
+[ext_resource type="Script" uid="uid://dbgr65373qs6g" path="res://scr/client-spawner.gd" id="10_yc10j"]
+[ext_resource type="PackedScene" uid="uid://dpnesfs7c4eb" path="res://scenes/client.tscn" id="11_jscy8"]
+[ext_resource type="Script" uid="uid://cnkyopj206hg5" path="res://scr/money-label.gd" id="12_pm3ni"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_color = Color(0.21960784, 0.12941177, 0.09019608, 1)
+albedo_texture = ExtResource("1_eb6dy")
+metallic = 1.0
+metallic_texture = ExtResource("2_eb6dy")
+roughness_texture = ExtResource("4_eb6dy")
+normal_enabled = true
+normal_texture = ExtResource("3_eb6dy")
+uv1_scale = Vector3(0.35, 0.35, 0.35)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.2181851, 0.13047573, 0.090834446, 1)
+albedo_texture = ExtResource("5_eb6dy")
+metallic = 1.0
+metallic_texture = ExtResource("6_eb6dy")
+roughness_texture = ExtResource("8_eb6dy")
+normal_enabled = true
+normal_texture = ExtResource("7_eb6dy")
+uv1_triplanar = true
+
+[node name="Main" type="Node3D" unique_id=130161391]
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1574574734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42430294, -0.039621532, 0.33136702)
+size = Vector3(7.7994385, 0.5510254, 7.6824036)
+material = SubResource("StandardMaterial3D_272bh")
+
+[node name="BackWall" type="CSGBox3D" parent="." unique_id=1513959720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42430294, 3.16684, -3.278294)
+size = Vector3(7.7994385, 5.8638973, 0.46308136)
+
+[node name="Counter" type="CSGBox3D" parent="." unique_id=519823737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42430294, 0.97095287, 0.3361497)
+size = Vector3(7.7994385, 1.4721229, 1.553082)
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="Player" type="Node3D" parent="." unique_id=1545265860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5026839, -1.4762005)
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=2029715764]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 0, 0, 0)
+script = ExtResource("9_gqmmt")
+
+[node name="ClientSpawnPoint" type="Marker3D" parent="." unique_id=349168775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="ClientSpawner" type="Node" parent="." unique_id=513861530 node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("10_yc10j")
+client_scene = ExtResource("11_jscy8")
+spawn_point = NodePath("../ClientSpawnPoint")
+
+[node name="Lamp" type="OmniLight3D" parent="." unique_id=276763188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=78829111]
+
+[node name="MoneyLabel" type="Label" parent="CanvasLayer" unique_id=1205568768]
+offset_left = 24.0
+offset_top = 14.0
+offset_right = 97.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "$123"
+script = ExtResource("12_pm3ni")
+
+[node name="GiveMoney" type="Button" parent="CanvasLayer" unique_id=785464975]
+offset_left = 529.0
+offset_top = 510.0
+offset_right = 705.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(0.7610015, 0.9447074, 0.5786785, 1)
+theme_override_font_sizes/font_size = 32
+text = "Выдать X₽"
