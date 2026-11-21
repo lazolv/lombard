@@ -1,7 +1,7 @@
 extends Node
 
-@export var client_scene: PackedScene
-@export var client_spawn_point: Marker3D
+var client_scene: PackedScene = preload("res://scenes/client.tscn")
+var client_spawn_point: Marker3D
 
 var current_client: Node3D = null
 
@@ -9,15 +9,16 @@ signal money_changed(new_amount: int)
 
 
 func _ready() -> void:
+	await get_tree().process_frame
 	spawn_client()
 
 
 func spawn_client() -> void:
 	assert(not current_client)
-	#current_client = client_scene.instantiate()
-	#add_child(current_client)
-	#current_client.global_position = client_spawn_point.global_position
-	#current_client.global_rotation = client_spawn_point.global_rotation
+	current_client = client_scene.instantiate()
+	add_child(current_client)
+	current_client.global_position = client_spawn_point.global_position
+	current_client.global_rotation = client_spawn_point.global_rotation
 
 
 func dismiss_client() -> void:

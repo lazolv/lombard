@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://fokoj71piylf" path="res://textures/wood/wood-roughness.png" id="8_0ld40"]
 [ext_resource type="Script" uid="uid://d0bw5tb0mncin" path="res://scripts/camera.gd" id="9_eb6dy"]
 [ext_resource type="Script" uid="uid://cnkyopj206hg5" path="res://scripts/money_label.gd" id="10_choun"]
+[ext_resource type="Script" uid="uid://dwkxgiije70u1" path="res://scripts/client_spawn_point.gd" id="10_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://lca7l8rvollx" path="res://Ui/control_panel.tscn" id="12_eb6dy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
 albedo_color = Color(0.21960784, 0.12941177, 0.09019608, 1)
@@ -70,10 +72,11 @@ script = ExtResource("9_eb6dy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.882143e-08, 0, -0.7872251)
 
 [node name="SpawnPoint" type="Marker3D" parent="Player/Camera3D" unique_id=544244128]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4282642e-07, -0.5917194, -1.6337439)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4282642e-07, -0.55421996, -1.6337439)
 
 [node name="ClientSpawnPoint" type="Marker3D" parent="." unique_id=349168775]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5198772)
+script = ExtResource("10_ya4ey")
 
 [node name="Lamp" type="OmniLight3D" parent="." unique_id=276763188]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
@@ -90,11 +93,4 @@ theme_override_font_sizes/font_size = 32
 text = "$123"
 script = ExtResource("10_choun")
 
-[node name="GiveMoney" type="Button" parent="CanvasLayer" unique_id=785464975]
-offset_left = 529.0
-offset_top = 510.0
-offset_right = 705.0
-offset_bottom = 563.0
-theme_override_colors/font_color = Color(0.7610015, 0.9447074, 0.5786785, 1)
-theme_override_font_sizes/font_size = 32
-text = "Выдать X₽"
+[node name="ControlPanel" parent="." unique_id=442514518 instance=ExtResource("12_eb6dy")]
