@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://chd4luu25ak43"]
+
+[node name="Item" type="Node3D" unique_id=729456019]
+
+[node name="TestItem" type="CSGBox3D" parent="." unique_id=1236836641]
+collision_layer = 2
+size = Vector3(0.3, 0.3, 0.3)
