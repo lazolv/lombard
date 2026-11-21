@@ -15,10 +15,10 @@ func _ready() -> void:
 
 func spawn_client() -> void:
     assert(not current_client)
-    #current_client = client_scene.instantiate()
-    #add_child(current_client)
-    #current_client.global_position = client_spawn_point.global_position
-    #current_client.global_rotation = client_spawn_point.global_rotation
+    current_client = client_scene.instantiate()
+    add_child(current_client)
+    current_client.global_position = client_spawn_point.global_position
+    current_client.global_rotation = client_spawn_point.global_rotation
 
 
 func dismiss_client() -> void:
