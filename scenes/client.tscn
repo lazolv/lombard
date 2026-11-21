@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dpnesfs7c4eb"]
 
+[ext_resource type="Script" uid="uid://dvxq5x16mqflt" path="res://scripts/client.gd" id="1_5f806"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wjq4c"]
 
 [node name="Client" type="Node3D" unique_id=961563518]
+script = ExtResource("1_5f806")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1541691677]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0)

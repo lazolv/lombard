@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://lca7l8rvollx"]
+
+[ext_resource type="Script" uid="uid://d0joq17yqqpre" path="res://Ui/scripts/control_panel.gd" id="1_8kow5"]
+[ext_resource type="Theme" uid="uid://d0bnwle8ktub" path="res://themes/font_theme.tres" id="1_f8y5r"]
+
+[node name="ControlPanel" type="Control" unique_id=442514518]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8kow5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=581429597]
+custom_minimum_size = Vector2(1920, 300)
+layout_mode = 0
+offset_top = 667.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 850
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=475713637]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=913824295]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme = ExtResource("1_f8y5r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HSlider" unique_id=346601652]
+layout_mode = 0
+offset_top = -76.0
+offset_right = 477.0
+offset_bottom = -7.0
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HSlider/HBoxContainer" unique_id=2069643636]
+layout_mode = 2
+text = "Сумма ссуды"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HSlider/HBoxContainer" unique_id=117757003]
+layout_mode = 2
+text = "0.0₽"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1626887032]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=376899867]
+layout_mode = 2
+theme = ExtResource("1_f8y5r")
+text = "Срок: "
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1458075525]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "1 день +18%"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=215200711]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "2 дня +42%"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=642568425]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1461456012]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Выдать"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=956808503]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Отказать"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]

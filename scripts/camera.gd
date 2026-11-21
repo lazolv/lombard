@@ -42,6 +42,7 @@ func _process(delta: float) -> void:
         curr_item_rotation_y = next_y
 
 
+
 func pick_up():
     target_item_rotation_x = 0.0
     target_item_rotation_y = 0.0
@@ -62,6 +63,7 @@ func put_back():
     var tween := create_tween().set_parallel(true)
     tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
     tween.tween_property(item, "global_transform", coords, 0.4)
+
 
 
 func _input(event: InputEvent) -> void:

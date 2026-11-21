@@ -93,11 +93,4 @@ theme_override_font_sizes/font_size = 32
 text = "$123"
 script = ExtResource("10_choun")
 
-[node name="GiveMoney" type="Button" parent="CanvasLayer" unique_id=785464975]
-offset_left = 529.0
-offset_top = 510.0
-offset_right = 705.0
-offset_bottom = 563.0
-theme_override_colors/font_color = Color(0.7610015, 0.9447074, 0.5786785, 1)
-theme_override_font_sizes/font_size = 32
-text = "Выдать X₽"
+[node name="ControlPanel" parent="." unique_id=442514518 instance=ExtResource("12_eb6dy")]

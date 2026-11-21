@@ -1,24 +1,12 @@
 [gd_scene format=3 uid="uid://drmwefmexy3wh"]
 
-[ext_resource type="PackedScene" uid="uid://ywkbnpkocnxi" path="res://models/gold_ring/source/gold_band_ring.fbx" id="1_5hpbd"]
-[ext_resource type="Texture2D" uid="uid://b54l8cdir8ilm" path="res://models/gold_ring/textures/gold_band_ring_color.png" id="2_ts03f"]
-[ext_resource type="Texture2D" uid="uid://bif1xot5oxlfl" path="res://models/gold_ring/textures/gold_band_ring_height.png" id="3_tvikt"]
-[ext_resource type="Texture2D" uid="uid://bu7txmd1y2we7" path="res://models/gold_ring/textures/gold_band_ring_metallic.png" id="4_m5lwu"]
-[ext_resource type="Texture2D" uid="uid://5h6x46jhm1cg" path="res://models/gold_ring/textures/gold_band_ring_normal.png" id="5_h4ecv"]
-[ext_resource type="Texture2D" uid="uid://n3dgrcn5r4tf" path="res://models/gold_ring/textures/gold_band_ring_roughness.png" id="6_0bjh1"]
+[ext_resource type="Script" uid="uid://dvxq5x16mqflt" path="res://scripts/client.gd" id="1_5hpbd"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hpbd"]
-albedo_texture = ExtResource("2_ts03f")
-metallic = 1.0
-metallic_texture = ExtResource("4_m5lwu")
-roughness_texture = ExtResource("6_0bjh1")
-normal_enabled = true
-normal_texture = ExtResource("5_h4ecv")
-heightmap_enabled = true
-heightmap_texture = ExtResource("3_tvikt")
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wjq4c"]
 
-[node name="GoldBandRingFbx" unique_id=50615237 instance=ExtResource("1_5hpbd")]
+[node name="Client" type="Node3D" unique_id=961563518]
+script = ExtResource("1_5hpbd")
 
-[node name="ring" parent="." index="0" unique_id=1585237484]
-transform = Transform3D(50, 0, 0, 0, -2.1855694e-06, 50, 0, -50, -2.1855694e-06, 0, 0, 0)
-surface_material_override/0 = SubResource("StandardMaterial3D_5hpbd")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1541691677]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0)
+mesh = SubResource("CapsuleMesh_wjq4c")
