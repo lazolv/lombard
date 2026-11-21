@@ -10,8 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://fokoj71piylf" path="res://textures/wood/wood-roughness.png" id="8_0ld40"]
 [ext_resource type="Script" uid="uid://d0bw5tb0mncin" path="res://scripts/camera.gd" id="9_eb6dy"]
 [ext_resource type="Script" uid="uid://cnkyopj206hg5" path="res://scripts/money_label.gd" id="10_choun"]
-[ext_resource type="Script" uid="uid://dwkxgiije70u1" path="res://scripts/client_spawn_point.gd" id="10_ya4ey"]
-[ext_resource type="PackedScene" uid="uid://lca7l8rvollx" path="res://Ui/control_panel.tscn" id="12_eb6dy"]
+[ext_resource type="Script" uid="uid://b2xwr0ys6akxy" path="res://scripts/client_spawn_point.gd" id="10_ya4ey"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
 albedo_color = Color(0.21960784, 0.12941177, 0.09019608, 1)
@@ -58,6 +57,7 @@ material = SubResource("StandardMaterial3D_choun")
 
 [node name="Counter" type="CSGBox3D" parent="." unique_id=519823737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42430294, 0.97095287, 0.3361497)
+transparency = 0.7
 size = Vector3(7.7994385, 1.4721229, 1.553082)
 material = SubResource("StandardMaterial3D_h2yge")
 
@@ -75,7 +75,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.882143e-08, 0, -0.7872251)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4282642e-07, -0.55421996, -1.6337439)
 
 [node name="ClientSpawnPoint" type="Marker3D" parent="." unique_id=349168775]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5198772)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 script = ExtResource("10_ya4ey")
 
 [node name="Lamp" type="OmniLight3D" parent="." unique_id=276763188]
