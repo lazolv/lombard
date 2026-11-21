@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://d0bw5tb0mncin" path="res://scripts/camera.gd" id="9_eb6dy"]
 [ext_resource type="Script" uid="uid://cnkyopj206hg5" path="res://scripts/money_label.gd" id="10_choun"]
 [ext_resource type="Script" uid="uid://b2xwr0ys6akxy" path="res://scripts/client_spawn_point.gd" id="10_ya4ey"]
+[ext_resource type="Script" uid="uid://lmftb0nbd3mu" path="res://scripts/give_money.gd" id="12_eb6dy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
 albedo_color = Color(0.21960784, 0.12941177, 0.09019608, 1)
@@ -101,3 +102,4 @@ offset_bottom = 563.0
 theme_override_colors/font_color = Color(0.7610015, 0.9447074, 0.5786785, 1)
 theme_override_font_sizes/font_size = 32
 text = "Выдать X₽"
+script = ExtResource("12_eb6dy")
