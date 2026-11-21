@@ -70,7 +70,7 @@ script = ExtResource("9_eb6dy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.882143e-08, 0, -0.7872251)
 
 [node name="SpawnPoint" type="Marker3D" parent="Player/Camera3D" unique_id=544244128]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4282642e-07, -0.55421996, -1.6337439)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4282642e-07, -0.5917194, -1.6337439)
 
 [node name="ClientSpawnPoint" type="Marker3D" parent="." unique_id=349168775]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)

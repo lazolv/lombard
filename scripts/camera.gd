@@ -9,6 +9,7 @@ extends Camera3D
 @onready var viewpoint = $InspectPoint
 
 const TestItem = preload("res://TestItem/Box.tscn")
+const Ring = preload("res://scenes/gold_band_ring_fbx.tscn")
 @onready var item
 @onready var coords
 @onready var target_item_rotation_x = 0.0
@@ -21,7 +22,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	await get_tree().current_scene.ready
 	
-	item = TestItem.instantiate()
+	item = Ring.instantiate()
 	get_tree().current_scene.add_child(item)
 	item.global_transform = spawn.global_transform
 	coords = item.global_transform

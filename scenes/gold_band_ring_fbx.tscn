@@ -19,6 +19,6 @@ heightmap_texture = ExtResource("3_tvikt")
 
 [node name="GoldBandRingFbx" unique_id=50615237 instance=ExtResource("1_5hpbd")]
 
-[node name="ring" parent="." index="0" unique_id=1585237484]
-transform = Transform3D(50, 0, 0, 0, -2.1855694e-06, 50, 0, -50, -2.1855694e-06, 0, 0, 0)
+[node name="ring" parent="." index="0" unique_id=720646141]
+transform = Transform3D(50, 0, 0, 0, -2.1855694e-06, 50, 0, -50, -2.1855694e-06, 0, -0.125, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_5hpbd")
