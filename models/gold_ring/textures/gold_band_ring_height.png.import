@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c22rxeaaxyiix"
-path.s3tc="res://.godot/imported/wood-normal.png-81efc02de6e5d3fef7084c67b0d5812d.s3tc.ctex"
+uid="uid://bif1xot5oxlfl"
+path.s3tc="res://.godot/imported/gold_band_ring_height.png-a0fcf9270e86d8a66bcd5bd5fa8e3c93.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tx/wood/wood-normal.png"
-dest_files=["res://.godot/imported/wood-normal.png-81efc02de6e5d3fef7084c67b0d5812d.s3tc.ctex"]
+source_file="res://models/gold_ring/textures/gold_band_ring_height.png"
+dest_files=["res://.godot/imported/gold_band_ring_height.png-a0fcf9270e86d8a66bcd5bd5fa8e3c93.s3tc.ctex"]
 
 [params]
 
@@ -22,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://wood-normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://68f3tstw876x"
-path.s3tc="res://.godot/imported/planks-roughness.png-a6383e1efafdd312b8daa4c49e070427.s3tc.ctex"
+uid="uid://n3dgrcn5r4tf"
+path.s3tc="res://.godot/imported/gold_band_ring_roughness.png-5f5ef3cf2246d675b5e97e9dda4b62b4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tx/planks/planks-roughness.png"
-dest_files=["res://.godot/imported/planks-roughness.png-a6383e1efafdd312b8daa4c49e070427.s3tc.ctex"]
+source_file="res://models/gold_ring/textures/gold_band_ring_roughness.png"
+dest_files=["res://.godot/imported/gold_band_ring_roughness.png-5f5ef3cf2246d675b5e97e9dda4b62b4.s3tc.ctex"]
 
 [params]
 

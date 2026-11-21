@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://tvn3it764qpl"]
+
+[ext_resource type="PackedScene" uid="uid://drmwefmexy3wh" path="res://scenes/gold_band_ring_fbx.tscn" id="1_bm3i4"]
+[ext_resource type="Script" uid="uid://b50xlmnmq17rl" path="res://scripts/item_data.gd" id="2_stpyw"]
+
+[resource]
+script = ExtResource("2_stpyw")
+base_value = 10000
+model_scene = ExtResource("1_bm3i4")
+metadata/_custom_type_script = "uid://b50xlmnmq17rl"

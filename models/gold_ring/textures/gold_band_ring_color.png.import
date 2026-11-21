@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4hdqoif48omv"
-path.s3tc="res://.godot/imported/planks-metalness.png-93b1452e7e924c5a04f57e872a8c25c8.s3tc.ctex"
+uid="uid://b54l8cdir8ilm"
+path.s3tc="res://.godot/imported/gold_band_ring_color.png-607e3f1deda85cd310b9db74d3879870.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tx/planks/planks-metalness.png"
-dest_files=["res://.godot/imported/planks-metalness.png-93b1452e7e924c5a04f57e872a8c25c8.s3tc.ctex"]
+source_file="res://models/gold_ring/textures/gold_band_ring_color.png"
+dest_files=["res://.godot/imported/gold_band_ring_color.png-607e3f1deda85cd310b9db74d3879870.s3tc.ctex"]
 
 [params]
 
